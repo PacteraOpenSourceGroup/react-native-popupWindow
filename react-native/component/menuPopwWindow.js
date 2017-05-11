@@ -5,17 +5,17 @@ import {
     Text,
     Image,
     TouchableOpacity,
-    Alert,
+    Alert,//弹窗
     Modal,
-    Dimensions,
-    ART,
+    Dimensions,//用于获取设备屏幕的宽高
+    ART,//绘图,Android默认就包含ART库，IOS需要单独添加依赖库
 } from 'react-native'
 const { width, height } = Dimensions.get('window');
 let mwidth = 70;
 let mheight = 100;
-const bgColor = '#2d2d2d';
+const bgColor = '#2d2d2d';//背景色,没有设置外部传入
 const top = 50;
-let dataArray;
+let dataArray;//列表数据源
 export default class MenuModal extends React.Component {
 
     constructor(props) {
@@ -23,6 +23,7 @@ export default class MenuModal extends React.Component {
         this.state = {
             isVisible: this.props.show,
         }
+        //数据传递
         mwidth = this.props.width || 70;
         mheight = this.props.height || 100;
         dataArray = this.props.dataArray;
@@ -31,7 +32,7 @@ export default class MenuModal extends React.Component {
     componentWillReceiveProps(nextProps) {
         this.setState({ isVisible: nextProps.show });
     }
-
+    //处理状态
     closeModal() {
         this.setState({
             isVisible: false
@@ -40,6 +41,7 @@ export default class MenuModal extends React.Component {
     }
 
     render() {
+        //绘制路径
         const path = ART.Path();
         path.moveTo(width - 10 - mwidth * 1 / 3 + 3, top);
         path.lineTo(width - 10 - mwidth * 1 / 3 + 9, top - 7);
@@ -50,6 +52,7 @@ export default class MenuModal extends React.Component {
                 <Modal
                     transparent={true}
                     visible={this.state.isVisible}
+                    //动画效果类型
                     animationType={'fade'}
                     onRequestClose={() => this.closeModal()}>
                     <TouchableOpacity style={styles.container} activeOpacity={1} onPress={() => this.closeModal()}>
@@ -76,6 +79,7 @@ export default class MenuModal extends React.Component {
         )
     }
 }
+//样式链
 const styles = StyleSheet.create({
     container: {
         width: width,
