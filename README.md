@@ -3,9 +3,8 @@
 ### The author:wwl901215
 
 
------------
 ### Demo:<br>
-<img src="https://github.com/PacteraOpenSourceGroup/react-native-popupWindow/blob/master/gif/demo.gif?raw=true" width=30%/>
+<img src="https://github.com/PacteraOpenSourceGroup/react-native-popupWindow/blob/master/gif/demo.gif?raw=true" width=30%/><br>
 #### 简要描述/simple description:<br>
 一个简单，好用，轻量级的弹窗自定义控件/A practical simple popupwindow controls for react-native<br>
 
