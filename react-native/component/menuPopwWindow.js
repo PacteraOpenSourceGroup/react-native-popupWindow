@@ -57,15 +57,15 @@ export default class MenuModal extends React.Component {
                             <ART.Shape d={path} fill={bgColor} />
                         </ART.Surface>
                         <View style={styles.modal}>
-                            <TouchableOpacity activeOpacity={1} onPress={() => Alert.alert('点击了首页')} style={styles.itemView}>
+                            <TouchableOpacity activeOpacity={1} onPress={() => Alert.alert('点击了第1个')} style={styles.itemView}>
                                 <Image style={styles.imgStyle} source={require('../res/icon_qr.png')} />
                                 <Text style={styles.textStyle}>{dataArray[0]}</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity activeOpacity={1} onPress={() => Alert.alert('点击了店铺')} style={[styles.itemView, { borderColor: '#999', borderTopWidth: 1, borderBottomWidth: 1 }]}>
+                            <TouchableOpacity activeOpacity={1} onPress={() => Alert.alert('点击了第2个')} style={[styles.itemView, { borderColor: '#999', borderTopWidth: 1, borderBottomWidth: 1 }]}>
                                 <Image style={styles.imgStyle} source={require('../res/icon_qr.png')} />
                                 <Text style={styles.textStyle}>{dataArray[1]}</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity activeOpacity={1} onPress={() => Alert.alert('点击了客服')} style={styles.itemView}>
+                            <TouchableOpacity activeOpacity={1} onPress={() => Alert.alert('点击了第3个')} style={styles.itemView}>
                                 <Image style={styles.imgStyle} source={require('../res/icon_qr.png')} />
                                 <Text style={styles.textStyle}>{dataArray[2]}</Text>
                             </TouchableOpacity>
